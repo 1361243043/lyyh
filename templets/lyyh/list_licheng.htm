@@ -1,0 +1,50 @@
+<!-- 引用外部头文件 -->
+{dede:include filename="head.htm"/}   
+    
+    <div class="er_mid">
+    	<div class="er_mid_l er_gywm">
+        	<ul>
+        	
+        	{dede:channelartlist typeid=1}
+ 			<li><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></li>
+			{/dede:channelartlist}
+					
+            </ul>
+            <!-- 导入联系方式 -->
+    {dede:include filename="contact.html"/}
+
+        </div>
+        
+        <div class="er_mid_r">
+        	<div class="er_mid_r_mbx">
+<strong>{dede:field.typename/} </strong>
+<span>所在位置:{dede:field.position/}</span>
+			</div>
+
+            <div class="er_mid_r_con">
+                <div class="content">
+<!-- 开始 --> 
+{dede:arclist orderby='pubdate' typeid='12' idlist='' limit='0,1'}
+
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tbody><tr> 
+    <td width="30%" rowspan="2" align="center">[field:imglink/]</td>
+    <td width="70%"><a href="[field:filename/]"><font size="6" color="red">[field:title/]</font></a></td>
+  </tr>
+  <tr><td>[field:description/]</td></tr>
+</tbody></table>
+
+{/dede:arclist}
+
+<!-- 结束 -->											
+               <div style="text-align: center;">&nbsp;</div>
+				</div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+  {dede:include filename="footer.htm"/}

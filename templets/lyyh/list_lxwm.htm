@@ -1,0 +1,35 @@
+{dede:include filename="head.htm"/}
+<!-- 导入外部头文件 -->
+    
+    <div class="er_mid">
+    	<div class="er_mid_l er_lxwm">
+        	<ul>
+            {dede:channelartlist typeid=7}
+ 			<li><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></li>
+			{/dede:channelartlist}
+			 </ul>
+            <!-- 导入联系方式 -->
+    {dede:include filename="contact.html"/}
+
+        </div>
+        
+        <div class="er_mid_r">
+        	<div class="er_mid_r_mbx">
+			<strong>{dede:field.typename/}</strong>
+			<span>所在位置：{dede:field name='position'/} </span>
+			</div>
+
+            <div class="er_mid_r_con">
+                <div class="content">
+			   <!-- 开始 -->
+
+				{dede:field.content/}
+			   <!-- 结束 -->
+            </div>
+        </div>
+    </div>
+    
+    
+    
+  {dede:include filename="footer.htm"/}
+<!-- 导入外部尾部文件 -->

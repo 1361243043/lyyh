@@ -1,0 +1,110 @@
+{dede:include filename="head.htm"/}
+<!-- 导入外部头文件 -->
+    <!--关于我们 新闻中心 视频-->
+    <div class="index_mid">
+    
+    	<div class="index_mid_l">
+        	<div class="index_mid_l_t">
+        		<!-- 更多选项 -->
+        		<a href="">&nbsp;&nbsp;</a>
+        	</div>
+            <a href="plus/list.php?tid=1" class="about_pic">
+            <!-- 图片展区 -->
+            <img src="{dede:global.cfg_templets_skin/}/statics/images/shihua/about1.jpg" width="331" height="66" />
+            </a>
+            <p class="about_us">
+            <!-- 内容展区 -->
+            
+			临沂沂河石化限公司是一家专业生产高清洁石化新能源的炼化企业，公司成立于2010年3月，位于兰山区化工园区（兰山区汪沟镇）。企业定位走石油产品精深加工…	
+			</p>
+        </div>
+        
+        <div class="index_mid_m">
+        	<div class="index_mid_l_t">
+        	<!-- 更多 -->
+        	<a href="plus/list.php?tid=2">&nbsp;&nbsp;</a>
+        	</div>
+            <ul class="index_mid_l_b">
+            <!-- 新闻中心内容 显示 -->
+           	{dede:arclist row='10' titlelen='24' orderby='pubdate' typeid='10,16'}
+            <li>[field:textlink/][field:pubdate function=MyDate('Y/m/d',@me)/]</li>
+             {/dede:arclist}
+			</ul>
+        </div>
+        
+        <div class="index_mid_r">
+        	<div class="index_mid_r_sp">
+          <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="191" width="240">
+            <param name="quality" value="high" />
+            <param name="movie" value="http://player.youku.com/player.php/sid/XMTI3NTI4MTc4OA==/v.swf" />
+            <embed height="191" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://player.youku.com/player.php/sid/XMTI3NTI4MTc4OA==/v.swf" type="application/x-shockwave-flash" width="240"></embed>
+            </object>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!--企业文化 产品展示 销售网络-->
+    <div class="index_mid2">
+    	<div class="index_mid2_1">
+        	<script src="{dede:global.cfg_templets_skin/}/statics/js/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+				<script type="text/javascript">
+                        $(function(){
+                            $("#KinSlideshow").KinSlideshow({
+                                    moveStyle:"down",
+                                    intervalTime:8,
+                                    mouseEvent:"mouseover",
+                                    titleFont:{ TitleFont_size:12,TitleFont_color:"#FEFEFE"}
+                            });
+                        })
+             </script>
+             <div id="KinSlideshow" style="visibility:hidden;position:relative;" >
+             <!-- 活动照片 -->
+			 	<a href="plus/list.php?tid=17" target="_blank"><img src="{dede:global.cfg_templets_skin/}/uploadfile/2014/0928/20140928111400685.jpg" alt="沂河石化公司联谊会组织员工台球比赛" width="287" height="183" /></a> 
+                <a href="plus/list.php?tid=17" target="_blank"><img src="{dede:global.cfg_templets_skin/}/uploadfile/2014/0928/20140928110757922.jpg" alt="同台竞技展风采-乒乓球比赛" width="287" height="183" /></a> 
+                <a href="plus/list.php?tid=17" target="_blank"><img src="{dede:global.cfg_templets_skin/}/uploadfile/2014/0928/20140928105428861.jpg" alt="沂河石化公司举行员工拔河比赛" width="287" height="183" /></a> 
+             </div>
+        </div>
+        <div class="index_mid2_2">
+        	<ul>
+        	<!-- 企业文化 -->
+        	{dede:channelartlist typeid=3}
+
+            <li><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></li>
+
+
+            {/dede:channelartlist}
+        	
+             </ul>
+        </div>
+        <div class="index_mid2_3">
+        	<div class="index_mid_l_t">
+        	<!-- 更多 -->
+        	<a href="plus/list.php?tid=4">&nbsp;&nbsp;</a></div>
+            <div class="index_mid2_3_b">
+            <!-- 产品展示 -->
+		{dede:arclist row='10' titlelen='24' orderby='pubdate' typeid='4' idlist='' col='1' limit='0,2'}
+		<dl>
+		<dt>[field:imglink/]</dt>
+		
+		<dd>[field:textlink/]</dd>
+		</dl>
+		{/dede:arclist}
+                			
+            </div>
+        </div>
+        <div class="index_mid2_4">
+        <!-- 销售网络 -->
+        <a href="plus/list.php?tid=24" style="width:220px; height:180px; display:block;"></a></div>
+    </div>
+    
+    <!--合作单位-->
+    <div class="index_mid3">
+    	<div style="height:27px;"></div>
+    	<div class="index_mid3_b">
+        <a href="http://www.lywww.com">临沂在线</a>
+			<a href="http://v.youku.com/v_show/id_XNzkyNTQwODEy.html">沂河石化宣传片</a>
+							        </div>
+    </div>
+ {dede:include filename="footer.htm"/}  
+  <!-- 导入外部尾部文件 --> 

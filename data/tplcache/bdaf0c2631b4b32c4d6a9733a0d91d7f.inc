@@ -1,0 +1,14 @@
+{dede:pagestyle maxwidth='800' pagepicnum='12' ddmaxwidth='200' row='3' col='4' value='2'/}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK022.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK022.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK036.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK036.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK036-50.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK036-50.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK036-51.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK036-51.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK037.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK037.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK037-50.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK037-50.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK037-51.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK037-51.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK037-52.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK037-52.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK037-53.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK037-53.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK038.jpg' text='' width='500' height='752'} /lyyh/uploads/allimg/151117/1-15111FK038.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK038-50.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK038-50.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK039.jpg' text='' width='500' height='332'} /lyyh/uploads/allimg/151117/1-15111FK039.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151117/1-15111FK039-50.jpg' text='' width='500' height='752'} /lyyh/uploads/allimg/151117/1-15111FK039-50.jpg {/dede:img}

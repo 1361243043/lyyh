@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/statics/css/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/statics/js/jquery-1.8.0.min.js"></script> 
+</head>
+
+<body>
+
+<div class="all">
+
+	<!--logo-->
+    <div class="logo">
+    	<div class="shoucang">
+			<a href="javascript:window.external.addFavorite('http://lianfa.com','联发');">加入收藏 </a>|
+			<a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://lianfa.com');"> 设为首页</a>
+		</div>
+		<!-- 检索 -->
+        <div class="search">
+        	<form name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+        	
+        	
+                <input style="padding-top:4px;" name='q' onclick="javascript:this.value='';" value="请输入你要查找的商品" />
+               
+             <button type="submit"  name="btsearch" id="btsearch"></button>
+                
+            </form>
+        </div><!--
+        
+         <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+  
+        
+         
+           <input name="q" type="text" class="search-keyword" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+           <select name="searchtype" class="search-option" id="search-option">
+               <option value="title" selected='1'>检索标题</option>
+               <option value="titlekeyword">智能模糊</option>
+           </select>
+          <button type="submit" class="search-submit">搜索</button>
+    
+        </form>
+    --></div>
+    
+    <!--导航-->
+    <div class="bander">
+    	<ul>
+        	<li style="width:88px;"><a href="{dede:global.cfg_cmsurl/}/">首页</a></li>
+            {dede:channel type='top' row='10' currentstyle="<li><a href='~typelink~' ~rel~>~typename~</a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>
+      	{/dede:channel}
+        </ul>
+    </div>
+    
+
+
+    <!--幻灯-->
+    <div class="hd">
+    	<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/statics/js/jquery.jslides.js"></script> 
+		<link href="{dede:global.cfg_templets_skin/}/statics/css/jquery.jslides.css" rel="stylesheet" type="text/css" />
+    	<div id="full-screen-slider" style="overflow:hidden;">
+            <ul id="slides">
+                <li style=" background:url({dede:global.cfg_templets_skin/}/statics/images/shihua/1.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+                <li style=" background:url({dede:global.cfg_templets_skin/}/statics/images/shihua/2.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+                <li style=" background:url({dede:global.cfg_templets_skin/}/statics/images/shihua/3.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+				<li style=" background:url({dede:global.cfg_templets_skin/}/statics/images/shihua/4.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+	<!--公司动态-->
+    <div class="dongtai">
+    	<strong>公司动态:
+    	</strong>
+        <script>
+            $(function(){
+                //单行应用@Mr.Think
+                var _wrap=$('ul.line');//定义滚动区域
+                var _interval=2000;//定义滚动间隙时间
+                var _moving;//需要清除的动画
+                _wrap.hover(function(){
+                    clearInterval(_moving);//当鼠标在滚动区域中时,停止滚动
+                },function(){
+                    _moving=setInterval(function(){
+                        var _field=_wrap.find('li:first');//此变量不可放置于函数起始处,li:first取值是变化的
+                        var _h=_field.height();//取得每次滚动高度
+                        _field.animate({marginTop:-_h+'px'},600,function(){//通过取负margin值,隐藏第一行
+                            _field.css('marginTop',0).appendTo(_wrap);//隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+                        })
+                    },_interval)//滚动间隔时间取决于_interval
+                }).trigger('mouseleave');//函数载入时,模拟执行mouseleave,即自动滚动
+            });
+        </script>
+
+	
+        <div class="ggr">
+            <ul class="line">
+            {dede:arclist row='10' titlelen='24' orderby='pubdate' typeid='10' idlist='121,120,119' channelid='3'}
+            <li>
+           <a  href="[field:arcurl/]">[field:description/]</a>【[field:pubdate function=MyDate('Y-m-d',@me)/]】<br/>
+           </li>
+           {/dede:arclist}
+
+            </ul>            
+        </div>
+       <div class="tianqi">
+       		<span id="time"></span> 
+			<script language="javascript" type="text/javascript">
+			 var d = new Date()
+			 document.getElementById('time').innerHTML=''+d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日　'+' 星期'+'日一二三四五六'.charAt(d.getDay());
+            </script>
+  			<iframe src="http://m.weather.com.cn/m/pn6/weather.htm " allowtransparency="true" style="background-color=transparent"  width="140" height="16"  hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+       </div>
+    </div>
+
+	<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/statics/css/cs_box.css" type="text/css"/>
+	<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/statics/js/cs_box.js"></script>
+	<div id='cs_box'>
+		<span class='cs_title'>在线咨询</span>
+		<span class='cs_close'>x</span>
+		<div class='cs_img'></div>
+		<!-- <span class='cs_info'>有什么可以帮到你</span>
+		<div class='cs_btn'>QQ咨询</div> -->
+	</div>
+	<script type="text/javascript">
+		myEvent(window,'load',function(){
+			cs_box.set({
+				img_path : '{dede:global.cfg_templets_skin/}/statics/images/shihua/01.jpg',		//设置图片路径
+				qq : '1744474071',		//设置QQ号码
+			});
+		});
+	</script> 

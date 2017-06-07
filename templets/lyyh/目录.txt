@@ -1,0 +1,15 @@
+index.htm  主页
+
+we.html  关于我们
+
+news.html 新闻中心
+
+culture.html 企业文化
+
+product.html 作品展示
+
+recruit.html 人才招聘
+
+online.html  在线留言 =》（form.html 表单）
+
+contact.html 联系我们

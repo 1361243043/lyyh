@@ -1,0 +1,27 @@
+{dede:include filename="head.htm"/}
+<!-- 导入外部头文件 -->
+    
+    <div class="er_mid">
+    	<div class="er_mid_l er_gywm">
+        	
+            <!-- 导入联系方式 -->
+    {dede:include filename="contact.html"/}
+
+        </div>
+        
+        <div class="er_mid_r">
+        	<div class="er_mid_r_mbx">
+			<strong>{dede:field.typename/}</strong>
+			<span>所在位置：{dede:field name='position'/}</span>
+			</div>
+
+            <div class="er_mid_r_con">
+               {dede:field.content/}
+            </div>
+        </div>
+    </div>
+    
+    
+    
+  {dede:include filename="footer.htm"/}
+<!-- 导入外部尾部文件 -->
